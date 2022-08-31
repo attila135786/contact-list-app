@@ -1,0 +1,20 @@
+Figma Notes
+
+Routes:
+
+	Contacts
+
+	Add Contact
+
+	Edit Contact
+
+Card Data:
+	FirstName
+	LastName
+	PhoneNumber
+	Email
+
+
+Bring in ContextApi
+
+Bring in scss

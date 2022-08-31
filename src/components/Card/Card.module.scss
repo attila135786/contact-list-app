@@ -1,0 +1,43 @@
+.container {
+  padding: 16px;
+  gap: 16px;
+  width: 342px;
+  height: 72px;
+  background: #FFFFFF;
+  border: 1px solid #E1E1E1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  transition: height 400ms;
+
+  &.open {
+    height: 132px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px
+}
+
+.phoneNumber {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.openContainer {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}

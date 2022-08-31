@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  height: calc(100% - 75px);
+  top: 75px;
+  left: 0;
+  background-color: white;
+  color: black;
+  position: absolute;
+  overflow: auto;
+}
