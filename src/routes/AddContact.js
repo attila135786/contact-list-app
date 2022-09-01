@@ -1,9 +1,14 @@
-import EditContact from "./EditContact";
+import Header from "../main/Header/Header";
+import Body from "../main/Body/Body";
+import EditAddContact from "../components/EditAddContact";
 
 const AddContact = () => {
   return (
     <>
-      <EditContact />
+      <Header text="Add Contact" />
+      <Body>
+        <EditAddContact />
+      </Body>
     </>
   );
 };
