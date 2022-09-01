@@ -19,5 +19,11 @@ export const getEmptyContact = () => {
   };
 };
 
-export const defaultState = { people, openCard: null, setAppState: () => {} };
+export const defaultState = {
+  people,
+  openCard: null,
+  setAppState: () => {},
+  openModal: null,
+};
+
 export const AppContext = React.createContext(defaultState);

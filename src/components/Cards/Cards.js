@@ -2,6 +2,7 @@ import { useCallback, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Card from "../Card";
+import Modal from "../Modals/Modal";
 import { AppContext } from "../../store/AppContext";
 
 import styles from "./Cards.module.scss";
@@ -32,16 +33,8 @@ const Cards = () => {
 
   const onDeleteClick = useCallback(
     (id) => () => {
-      // open delete modal and delete if accepted...
       setAppState((prevState) => {
-        const newPeople = [];
-        for (let person of prevState.people) {
-          if (person.id !== id) {
-            newPeople.push(person);
-          }
-        }
-
-        return { ...prevState, people: newPeople };
+        return { ...prevState, modalOpen: "delete", deleteId: id };
       });
     },
     []

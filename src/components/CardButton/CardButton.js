@@ -6,7 +6,7 @@ import styles from "./CardButton.module.scss";
 const CardButton = ({
   backgroundColor = "#F3F5FF",
   color = "black",
-  icon,
+  icon = null,
   text,
   onClick,
 }) => {
@@ -16,15 +16,15 @@ const CardButton = ({
 
   return (
     <button className={styles.button} style={overrideStyles} onClick={onClick}>
-      <div className={styles.iconContainer}>{icon}</div>
+      {icon && <div className={styles.iconContainer}>{icon}</div>}
       <div>{text}</div>
     </button>
   );
 };
 
 CardButton.propTypes = {
-  icon: PropTypes.element.isRequired,
   text: PropTypes.string.isRequired,
+  icon: PropTypes.element,
   onClick: PropTypes.func.isRequired,
   backgroundColor: PropTypes.string,
   color: PropTypes.string,
