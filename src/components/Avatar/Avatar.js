@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import { ReactComponent as PersonIcon } from "../../icons/person.svg";
 
 import styles from "./Avatar.module.scss";

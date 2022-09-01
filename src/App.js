@@ -4,16 +4,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from "./routes/Contacts";
 import AddContact from "./routes/AddContact";
 import EditContact from "./routes/EditContact";
+import { AppContext, defaultState } from "./store/AppContext";
 
 import "@fontsource/roboto";
 import "./App.scss";
-import { AppContext, defaultState } from "./store/AppContext";
+import styles from "./App.scss";
 
 const App = () => {
   const [appState, setAppState] = useState(defaultState);
   return (
     <>
-      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      <div className={styles.container}>
         <AppContext.Provider value={{ appState, setAppState }}>
           <Router>
             <>

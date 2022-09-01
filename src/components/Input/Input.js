@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./Input.module.scss";
 
 const Input = ({ label, value, onChange }) => {
@@ -12,6 +13,12 @@ const Input = ({ label, value, onChange }) => {
       />
     </div>
   );
+};
+
+Input.propTypes = {
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Input;

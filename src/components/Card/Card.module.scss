@@ -18,6 +18,11 @@
   }
 }
 
+.infoContainer {
+  display: flex;
+  align-items: center;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -40,4 +45,10 @@
   position: absolute;
   right: 30px;
   cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

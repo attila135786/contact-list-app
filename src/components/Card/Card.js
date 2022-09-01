@@ -30,7 +30,7 @@ const Card = ({
 
   return (
     <div className={cardStyles}>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className={styles.infoContainer}>
         <Avatar text={firstName[0].toString() + lastName[0].toString()} />
         <div className={styles.info}>
           <div className={styles.name}>
@@ -44,13 +44,7 @@ const Card = ({
         </div>
       </div>
       {open && (
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className={styles.buttonContainer}>
           <CardButton text="EDIT" icon={<EditIcon />} onClick={onEditClick} />
           <CardButton
             text="DELETE"
@@ -66,11 +60,14 @@ const Card = ({
 };
 
 Card.propTypes = {
+  open: PropTypes.bool,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   phoneNumber: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  open: PropTypes.bool,
+  setOpenCardWithId: PropTypes.func.isRequired,
+  onDeleteClick: PropTypes.func.isRequired,
+  onEditClick: PropTypes.func.isRequired,
 };
 
 export default Card;

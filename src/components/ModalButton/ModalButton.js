@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import styles from "./ModalButton.module.scss";
 
 const ModalButton = ({
@@ -15,6 +17,13 @@ const ModalButton = ({
       {text}
     </button>
   );
+};
+
+ModalButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default ModalButton;

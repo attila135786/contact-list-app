@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import PropTypes from "prop-types";
 
 import styles from "./CardButton.module.scss";
 
@@ -19,6 +20,14 @@ const CardButton = ({
       <div>{text}</div>
     </button>
   );
+};
+
+CardButton.propTypes = {
+  icon: PropTypes.element.isRequired,
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default CardButton;

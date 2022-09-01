@@ -1,10 +1,10 @@
 import { useCallback, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Card from "../Card";
 import { AppContext } from "../../store/AppContext";
 
 import styles from "./Cards.module.scss";
-import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
   const { appState, setAppState } = useContext(AppContext);
